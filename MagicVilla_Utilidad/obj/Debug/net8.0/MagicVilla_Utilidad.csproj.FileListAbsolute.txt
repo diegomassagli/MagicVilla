@@ -1,0 +1,12 @@
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\bin\Debug\net8.0\MagicVilla_Utilidad.deps.json
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\bin\Debug\net8.0\MagicVilla_Utilidad.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\bin\Debug\net8.0\MagicVilla_Utilidad.pdb
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\MagicVilla_Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\MagicVilla_Utilidad.AssemblyInfoInputs.cache
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\MagicVilla_Utilidad.AssemblyInfo.cs
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\MagicVilla_Utilidad.csproj.CoreCompileInputs.cache
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\MagicVilla_Utilidad.sourcelink.json
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\MagicVilla_Utilidad.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\refint\MagicVilla_Utilidad.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\MagicVilla_Utilidad.pdb
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Utilidad\obj\Debug\net8.0\ref\MagicVilla_Utilidad.dll
