@@ -21,7 +21,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 
-builder.Services.AddScoped<IVillaRepositorio, VillaRepositorio>();
+builder.Services.AddScoped<IVillaRepositorio, VillaRepositorio>(); // addScope servicios que se crean una vez por solicitud y luego se destruyen..., add Singleton: se crea la primera vez  y luego cada solicitud posterior utiliza esa instancia. AddTransient se usa y se destruye y se vuelve a crear si se necesita 
 builder.Services.AddScoped<INumeroVillaRepositorio, NumeroVillaRepositorio>();
 
 var app = builder.Build();

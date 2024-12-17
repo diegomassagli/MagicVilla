@@ -9,7 +9,7 @@ namespace MagicVilla_API.Repositorio
 
         private readonly ApplicationDbContext _db;
 
-        public VillaRepositorio(ApplicationDbContext db) : base(db) 
+        public VillaRepositorio(ApplicationDbContext db) : base(db) //tengo que usar :base para pasar el repositorio del padre al hijo, porque en este caso el padre ya lo tenia implementado...
         {
             _db = db;
         }

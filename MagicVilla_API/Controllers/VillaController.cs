@@ -52,8 +52,8 @@ namespace MagicVilla_API.Controllers
         }
 
 
-        [HttpGet("{id:int}", Name = "GetVilla")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [HttpGet("{id:int}", Name = "GetVilla")]                          // necesito darle un nombre para referenciarlo luego de un alta con el CreatedAtRoute()
+        [ProducesResponseType(StatusCodes.Status200OK)]                  // para documentar las respuestas
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<APIResponse>> GetVilla(int id)
@@ -101,7 +101,7 @@ namespace MagicVilla_API.Controllers
                 }
                 if (await _villaRepo.Obtener(v => v.Nombre.ToLower() == createDto.Nombre.ToLower()) != null)
                 {
-                    ModelState.AddModelError("ErrorMessages", "La Villa con ese Nombre ya existe!"); // validacion modelstate personalizados
+                    ModelState.AddModelError("ErrorMessages", "La Villa con ese Nombre ya existe!"); // validacion modelstate personalizados. El primero es el nombre de la validacion que yo le doy
                     return BadRequest(ModelState);
                 }
                 if (createDto == null)
@@ -133,7 +133,7 @@ namespace MagicVilla_API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<IActionResult> DeleteVilla(int id)
+        public async Task<IActionResult> DeleteVilla(int id)  // uso IActionResult porque este metodo no devuelve nada especial, solo codigos http, no devuelve modelos ni nada de eso...
         {
             try
             {
@@ -164,9 +164,9 @@ namespace MagicVilla_API.Controllers
             return BadRequest(_response);
         }
 
-        [HttpPut("{id:int}")]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]        
+        [HttpPut("{id:int}")]  // como no tengo que devolver nada, puedo utilizar IActionResult
         [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]        
         public async Task<IActionResult> UpdateVilla(int id, [FromBody] VillaUpdateDto updateDto)
         {
             if(updateDto == null || id!= updateDto.Id)
@@ -210,9 +210,10 @@ namespace MagicVilla_API.Controllers
 
             Villa modelo = _mapper.Map<Villa>(villaDto);
 
-            _villaRepo.Actualizar(modelo);
+            await _villaRepo.Actualizar(modelo);
+            _response.statusCode = HttpStatusCode.NoContent;
 
-            return NoContent();
+            return Ok(_response);
         }
 
 

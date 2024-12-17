@@ -21,8 +21,8 @@ namespace MagicVilla_API.Repositorio
 
         public async Task Crear(T entidad)
         {
-            await dbSet.AddAsync(entidad);
-            await Grabar();
+            await dbSet.AddAsync(entidad); // agrega el registro
+            await Grabar();                // hace el savechanges
         }
 
         public async Task Grabar()
@@ -32,14 +32,14 @@ namespace MagicVilla_API.Repositorio
 
         public async Task<T> Obtener(Expression<Func<T, bool>> filtro = null, bool tracked = true, string? incluirPropiedades = null)
         {
-            IQueryable<T> query = dbSet;
+            IQueryable<T> query = dbSet;  // es una variable que significa que vamos a poder hacer consultas...
             if (!tracked)
             {
                 query = query.AsNoTracking();
             }
             if (filtro != null)
             {
-                query = query.Where(filtro);
+                query = query.Where(filtro); // donde filtro es una expresion Linq
             }
 
             if(incluirPropiedades != null) // indica que necesitamos incluir los datos relacionados (se recibe una cadena como: "Villa,OtroModelo")
@@ -56,6 +56,7 @@ namespace MagicVilla_API.Repositorio
         public async Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro = null, string? incluirPropiedades = null)
         {
             IQueryable<T> query = dbSet;
+
             if (filtro != null)
             {
                 query = query.Where(filtro);
@@ -78,5 +79,10 @@ namespace MagicVilla_API.Repositorio
             dbSet.Remove(entidad);
             await Grabar();
         }
+
+
+        // el Update no se incluye porque es mas especifico de cada entidad...
+
+
     }
 }
