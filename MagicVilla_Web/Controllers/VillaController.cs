@@ -33,14 +33,14 @@ namespace MagicVilla_Web.Controllers
         }
 
         // Get (por defecto)
-        public async Task<IActionResult> CrearVilla()
+        public async Task<IActionResult> CrearVilla()  // solo llama a la vista con su mismo nombre "CrearVilla"
         {
             return View();
         }
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken] // metodo de seguridad que hay que incluir siempre en los post
         public async Task<IActionResult> CrearVilla(VillaCreateDto modelo)
         {
             if(ModelState.IsValid)
@@ -48,13 +48,14 @@ namespace MagicVilla_Web.Controllers
                 var response = await _villaService.Crear<APIResponse>(modelo);
                 if (response != null && response.IsExitoso)
                 {
+                    TempData["exitoso"] = "Villa Creada Exitosamente";
                     return RedirectToAction(nameof(IndexVilla));
                 }                
             }
             return View(modelo);
         }
 
-
+        // tengo 2 metodos uno llama a la vista y el otro recibe los datos para actualizar por post
         public async Task<IActionResult> ActualizarVilla(int villaId)
         {
             var response = await _villaService.Obtener<APIResponse>(villaId);
@@ -78,6 +79,7 @@ namespace MagicVilla_Web.Controllers
                 var response = await _villaService.Actualizar<APIResponse>(modelo);
                 if(response != null && response.IsExitoso)
                 {
+                    TempData["exitoso"] = "Villa Creada Exitosamente";
                     return RedirectToAction(nameof(IndexVilla));
                 }
             }
@@ -106,8 +108,10 @@ namespace MagicVilla_Web.Controllers
             var response = await _villaService.Remover<APIResponse>(modelo.Id);
             if (response != null && response.IsExitoso)
             {
+                TempData["exitoso"] = "Villa Eliminada Exitosamente";
                 return RedirectToAction(nameof(IndexVilla));
             }
+            TempData["error"] = "Ocurrio un Error al Remover";
             return View(modelo);
         }
 

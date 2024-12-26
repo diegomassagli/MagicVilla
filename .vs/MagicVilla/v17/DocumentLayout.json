@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\shared\\_notificacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\shared\\_notificacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\controllers\\numerovillacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\controllers\\numerovillacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\controllers\\villacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\controllers\\villacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\numerovilla\\removernumerovilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\numerovilla\\removernumerovilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\numerovilla\\actualizarnumerovilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\numerovilla\\actualizarnumerovilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VillaController.cs",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Controllers\\VillaController.cs",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Controllers\\VillaController.cs",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Controllers\\VillaController.cs",
+              "RelativeToolTip": "MagicVilla_Web\\Controllers\\VillaController.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAUwHEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T17:10:27.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T17:08:25.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Notificacion.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_Notificacion.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\Shared\\_Notificacion.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_Notificacion.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\Shared\\_Notificacion.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA3wBoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T17:02:49.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T17:00:33.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ActualizarNumeroVilla.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\NumeroVilla\\ActualizarNumeroVilla.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\NumeroVilla\\ActualizarNumeroVilla.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\NumeroVilla\\ActualizarNumeroVilla.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\NumeroVilla\\ActualizarNumeroVilla.cshtml",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T14:52:59.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RemoverNumeroVilla.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\NumeroVilla\\RemoverNumeroVilla.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\NumeroVilla\\RemoverNumeroVilla.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\NumeroVilla\\RemoverNumeroVilla.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\NumeroVilla\\RemoverNumeroVilla.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACwAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T14:52:53.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NumeroVillaController.cs",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Controllers\\NumeroVillaController.cs",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Controllers\\NumeroVillaController.cs",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Controllers\\NumeroVillaController.cs",
+              "RelativeToolTip": "MagicVilla_Web\\Controllers\\NumeroVillaController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAA2wMgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T20:09:58.294Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
