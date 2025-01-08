@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<MagicVilla_Web.Models.Dto.NumeroVillaDto>
+@using MagicVilla_Utilidad
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor httpContextAcc
 
 
 @{
@@ -12,8 +14,10 @@
             <h1 class="text-primary">Lista de Numero de Villas</h1>
         </div>
         <div class="col text-end pt-1">
-            <a asp-controller="NumeroVilla" asp-action="CrearNumeroVilla" class="btn btn-outline-primary"><i class="bi bi-plus-square-fill"></i>Crear Nuevo Numero Villa</a>
-
+            @if (httpContextAcc.HttpContext.Session.GetString(DS.SessionToken) != null && httpContextAcc.HttpContext.Session.GetString(DS.SessionToken).ToString().Length > 0)
+            {                
+                <a asp-controller="NumeroVilla" asp-action="CrearNumeroVilla" class="btn btn-outline-primary"><i class="bi bi-plus-square-fill"></i>Crear Nuevo Numero Villa</a>
+            }
         </div>
     </div>
     <table class="table">

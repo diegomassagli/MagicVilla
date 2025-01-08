@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|solutionrelative:magicvilla_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\numerovilla\\indexnumerovilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\numerovilla\\indexnumerovilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|solutionrelative:magicvilla_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\villa\\indexvilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\villa\\indexvilla.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_api\\repositorio\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|solutionrelative:magicvilla_api\\repositorio\\usuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_api\\magicvilla_api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|solutionrelative:magicvilla_api\\magicvilla_api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_api\\controllers\\numerovillacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|solutionrelative:magicvilla_api\\controllers\\numerovillacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|solutionrelative:magicvilla_api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_api\\controllers\\villacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00C320C8-9398-4F25-AAB9-27215F1AEA43}|MagicVilla_API\\MagicVilla_API.csproj|solutionrelative:magicvilla_api\\controllers\\villacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|d:\\proyectosaspnet\\aspnet-core\\webapi-net7-baezstone\\magicvilla\\magicvilla_web\\services\\iservices\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C49F3FF-F610-40F0-BA6C-C4B7B1D6F4C8}|MagicVilla_Web\\MagicVilla_Web.csproj|solutionrelative:magicvilla_web\\services\\iservices\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,80 +46,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioRepositorio.cs",
-              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Repositorio\\UsuarioRepositorio.cs",
-              "RelativeDocumentMoniker": "MagicVilla_API\\Repositorio\\UsuarioRepositorio.cs",
-              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Repositorio\\UsuarioRepositorio.cs",
-              "RelativeToolTip": "MagicVilla_API\\Repositorio\\UsuarioRepositorio.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAA0wBUAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T17:38:29.324Z",
+              "DocumentIndex": 0,
+              "Title": "IndexNumeroVilla.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\NumeroVilla\\IndexNumeroVilla.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\NumeroVilla\\IndexNumeroVilla.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\NumeroVilla\\IndexNumeroVilla.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\NumeroVilla\\IndexNumeroVilla.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T14:53:48.084Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\appsettings.json",
-              "RelativeDocumentMoniker": "MagicVilla_API\\appsettings.json",
-              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\appsettings.json",
-              "RelativeToolTip": "MagicVilla_API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-02T17:37:46.592Z",
+              "Title": "IndexVilla.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Villa\\IndexVilla.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\Villa\\IndexVilla.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Villa\\IndexVilla.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\Villa\\IndexVilla.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T14:51:58.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MagicVilla_Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T14:50:49.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MagicVilla_API",
-              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\MagicVilla_API.csproj",
-              "RelativeDocumentMoniker": "MagicVilla_API\\MagicVilla_API.csproj",
-              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\MagicVilla_API.csproj",
-              "RelativeToolTip": "MagicVilla_API\\MagicVilla_API.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-02T17:37:32.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Program.cs",
-              "RelativeDocumentMoniker": "MagicVilla_API\\Program.cs",
-              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Program.cs",
-              "RelativeToolTip": "MagicVilla_API\\Program.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAywDQAAAA8AAAA",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MagicVilla_Web\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAwwBkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T14:19:36.21Z",
+              "WhenOpened": "2025-01-06T20:54:21.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "NumeroVillaController.cs",
-              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Controllers\\NumeroVillaController.cs",
-              "RelativeDocumentMoniker": "MagicVilla_API\\Controllers\\NumeroVillaController.cs",
-              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Controllers\\NumeroVillaController.cs",
-              "RelativeToolTip": "MagicVilla_API\\Controllers\\NumeroVillaController.cs",
-              "ViewState": "AQIAAMAAAAAAAAAAAAAUwNMAAAAAAAAA",
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "MagicVilla_API\\Controllers\\UsuarioController.cs",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "MagicVilla_API\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAywBgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T14:16:54.226Z",
+              "WhenOpened": "2025-01-06T20:54:13.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "VillaController.cs",
-              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Controllers\\VillaController.cs",
-              "RelativeDocumentMoniker": "MagicVilla_API\\Controllers\\VillaController.cs",
-              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_API\\Controllers\\VillaController.cs",
-              "RelativeToolTip": "MagicVilla_API\\Controllers\\VillaController.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAIwF0AAAAIAAAA",
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Services\\UsuarioService.cs",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "MagicVilla_Web\\Services\\UsuarioService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T19:23:33.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T20:54:03.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Services\\IServices\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "MagicVilla_Web\\Services\\IServices\\IUsuarioService.cs",
+              "ToolTip": "D:\\ProyectosASPNET\\ASPNET-CORE\\WebApi-Net7-BaezStone\\MagicVilla\\MagicVilla_Web\\Services\\IServices\\IUsuarioService.cs",
+              "RelativeToolTip": "MagicVilla_Web\\Services\\IServices\\IUsuarioService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T20:53:59.704Z"
             }
           ]
         }
