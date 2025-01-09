@@ -9,6 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using AutoMapper;
 
 namespace MagicVilla_API.Repositorio
 {
@@ -17,12 +18,14 @@ namespace MagicVilla_API.Repositorio
         private readonly ApplicationDbContext _db;
         private string secretKey;
         private readonly UserManager<UsuarioAplicacion> _userManager;
+        private readonly IMapper _mapper;
 
-        public UsuarioRepositorio(ApplicationDbContext db, IConfiguration configuration, UserManager<UsuarioAplicacion> userManager)
+        public UsuarioRepositorio(ApplicationDbContext db, IConfiguration configuration, UserManager<UsuarioAplicacion> userManager, IMapper mapper)
         {
             _db = db;
             secretKey = configuration.GetValue<string>("ApiSetting:Secret");
             _userManager = userManager;
+            _mapper = mapper;
         }
 
         public bool IsUsuarioUnico(string userName)
@@ -67,7 +70,8 @@ namespace MagicVilla_API.Repositorio
             LoginResponseDTO loginResponseDTO = new()
             {
                 Token = tokenHandler.WriteToken(token),
-                Usuario = usuario
+                Usuario = _mapper.Map<UsuarioDto>(usuario),
+                Rol = roles.FirstOrDefault()
             };
 
             return loginResponseDTO;
