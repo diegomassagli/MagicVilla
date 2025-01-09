@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Asp.Versioning;
+using AutoMapper;
 using MagicVilla_API.Datos;
 using MagicVilla_API.Modelos;
 using MagicVilla_API.Modelos.Dto;
@@ -11,23 +12,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 
-namespace MagicVilla_API.Controllers
+namespace MagicVilla_API.Controllers.v1
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class NumeroVillaController : ControllerBase
+    [ApiVersion("1.0")]
+    public class VillaController : ControllerBase
     {
-        private readonly ILogger<NumeroVillaController> _logger;
+        private readonly ILogger<VillaController> _logger;
         private readonly IVillaRepositorio _villaRepo;
-        private readonly INumeroVillaRepositorio _numeroRepo;
         private readonly IMapper _mapper;
         protected APIResponse _response;
 
-        public NumeroVillaController(ILogger<NumeroVillaController> logger, IVillaRepositorio villaRepo, INumeroVillaRepositorio numeroRepo, IMapper mapper)
+        public VillaController(ILogger<VillaController> logger, IVillaRepositorio villaRepo, IMapper mapper)
         {
             _logger = logger;
             _villaRepo = villaRepo;
-            _numeroRepo = numeroRepo;
             _mapper = mapper;
             _response = new();
         }
@@ -35,15 +35,15 @@ namespace MagicVilla_API.Controllers
         [HttpGet]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task< ActionResult<APIResponse>> GetNumeroVillas()
+        public async Task<ActionResult<APIResponse>> GetVillas()
         {
             try
             {
-                _logger.LogInformation("Obtener los Numeros de Villas");
+                _logger.LogInformation("Obtener las Villas");
 
-                IEnumerable<NumeroVilla> numerovillaList = await _numeroRepo.ObtenerTodos(incluirPropiedades:"Villa");
+                IEnumerable<Villa> villaList = await _villaRepo.ObtenerTodos();
 
-                _response.Resultado = _mapper.Map<IEnumerable<NumeroVillaDto>>(numerovillaList);
+                _response.Resultado = _mapper.Map<IEnumerable<VillaDto>>(villaList);
                 _response.statusCode = HttpStatusCode.OK;
                 return Ok(_response);
             }
@@ -56,30 +56,30 @@ namespace MagicVilla_API.Controllers
         }
 
 
-        [HttpGet("{id:int}", Name = "GetNumeroVilla")]
+        [HttpGet("{id:int}", Name = "GetVilla")]                          // necesito darle un nombre para referenciarlo luego de un alta con el CreatedAtRoute()
         [Authorize]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status200OK)]                  // para documentar las respuestas
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<APIResponse>> GetNumeroVilla(int id)
+        public async Task<ActionResult<APIResponse>> GetVilla(int id)
         {
             try
             {
                 if (id == 0)
                 {
-                    _logger.LogError("Error al traer Numero Villa con Id: " + id);
+                    _logger.LogError("Error al traer Villa con Id: " + id);
                     _response.statusCode = HttpStatusCode.BadRequest;
                     _response.IsExitoso = false;
                     return BadRequest(_response);  // Http 400
                 }
-                var numeroVilla = await _numeroRepo.Obtener(v => v.VillaNro == id, incluirPropiedades:"Villa");
-                if (numeroVilla == null)
+                var villa = await _villaRepo.Obtener(v => v.Id == id);
+                if (villa == null)
                 {
                     _response.statusCode = HttpStatusCode.NotFound;
                     _response.IsExitoso = false;
                     return NotFound(_response); // Http 404
                 }
-                _response.Resultado = _mapper.Map<NumeroVillaDto>(numeroVilla);
+                _response.Resultado = _mapper.Map<VillaDto>(villa);
                 _response.statusCode = HttpStatusCode.OK;
                 return Ok(_response);  // Http 200
             }
@@ -97,7 +97,7 @@ namespace MagicVilla_API.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<APIResponse>> CrearNumeroVilla([FromBody] NumeroVillaCreateDto createDto)
+        public async Task<ActionResult<APIResponse>> CrearVilla([FromBody] VillaCreateDto createDto)
         {
             try
             {
@@ -105,14 +105,9 @@ namespace MagicVilla_API.Controllers
                 {
                     return BadRequest(ModelState);     // si no paso con los dataAnotations del modelo
                 }
-                if (await _numeroRepo.Obtener(v => v.VillaNro == createDto.VillaNro) != null)
+                if (await _villaRepo.Obtener(v => v.Nombre.ToLower() == createDto.Nombre.ToLower()) != null)
                 {
-                    ModelState.AddModelError("ErrorMessages", "El numero de Villa ya existe!"); // validacion modelstate personalizados
-                    return BadRequest(ModelState);
-                }
-                if(await _villaRepo.Obtener(v=>v.Id==createDto.VillaId) == null)
-                {
-                    ModelState.AddModelError("ErrorMessages", "El Id de la Villa no existe!"); // validacion modelstate personalizados
+                    ModelState.AddModelError("ErrorMessages", "La Villa con ese Nombre ya existe!"); // validacion modelstate personalizados. El primero es el nombre de la validacion que yo le doy
                     return BadRequest(ModelState);
                 }
                 if (createDto == null)
@@ -120,15 +115,15 @@ namespace MagicVilla_API.Controllers
                     return BadRequest(createDto);
                 }
 
-                NumeroVilla modelo = _mapper.Map<NumeroVilla>(createDto);
+                Villa modelo = _mapper.Map<Villa>(createDto);
 
                 modelo.FechaCreacion = DateTime.Now;
                 modelo.FechaActualizacion = DateTime.Now;
-                await _numeroRepo.Crear(modelo);  // agrego registro a la base de datos
+                await _villaRepo.Crear(modelo);  // agrego registro a la base de datos
                 _response.Resultado = modelo;
                 _response.statusCode = HttpStatusCode.Created;
 
-                return CreatedAtRoute("GetNumeroVilla", new { id = modelo.VillaNro }, _response); // despues de dar un alta, se acostumbra mostrar lo creado desde la base misma, con un statuscode 201
+                return CreatedAtRoute("GetVilla", new { id = modelo.Id }, _response); // despues de dar un alta, se acostumbra mostrar lo creado desde la base misma, con un statuscode 201
 
             }
             catch (Exception ex)
@@ -145,7 +140,7 @@ namespace MagicVilla_API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<IActionResult> DeleteNumeroVilla(int id)
+        public async Task<IActionResult> DeleteVilla(int id)  // uso IActionResult porque este metodo no devuelve nada especial, solo codigos http, no devuelve modelos ni nada de eso...
         {
             try
             {
@@ -155,15 +150,15 @@ namespace MagicVilla_API.Controllers
                     _response.statusCode = HttpStatusCode.BadRequest;
                     return BadRequest(_response);
                 }
-                var numeroVilla = await _numeroRepo.Obtener(v => v.VillaNro == id);
-                if (numeroVilla == null)
+                var villa = await _villaRepo.Obtener(v => v.Id == id);
+                if (villa == null)
                 {
                     _response.IsExitoso = false;
                     _response.statusCode = HttpStatusCode.NotFound;
                     return NotFound(_response);
                 }
 
-                await _numeroRepo.Remover(numeroVilla);
+                await _villaRepo.Remover(villa);
 
                 _response.statusCode = HttpStatusCode.NoContent;
                 return Ok(_response);                     //siempre con delete se devuelve "No Content" pero para devolver una respuesta estandarizada como el NoContent no permite devolver nada lo cambio a OK 
@@ -176,31 +171,58 @@ namespace MagicVilla_API.Controllers
             return BadRequest(_response);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:int}")]  // como no tengo que devolver nada, puedo utilizar IActionResult
         [Authorize(Roles = "admin")]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]        
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<IActionResult> UpdateNumeroVilla(int id, [FromBody] NumeroVillaUpdateDto updateDto)
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> UpdateVilla(int id, [FromBody] VillaUpdateDto updateDto)
         {
-            if(updateDto == null || id!= updateDto.VillaNro)
+            if (updateDto == null || id != updateDto.Id)
             {
                 _response.IsExitoso = false;
                 _response.statusCode = HttpStatusCode.BadRequest;
                 return BadRequest(_response);
             }
 
-            if(await _villaRepo.Obtener(v=>v.Id == updateDto.VillaId) == null)
+            Villa modelo = _mapper.Map<Villa>(updateDto);
+
+            await _villaRepo.Actualizar(modelo);
+            _response.statusCode = HttpStatusCode.NoContent;
+
+            return Ok(_response);
+        }
+
+
+        [HttpPatch("{id:int}")]
+        [Authorize(Roles = "admin")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<IActionResult> UpdatePartialVilla(int id, JsonPatchDocument<VillaUpdateDto> patchDto)
+        {
+            if (patchDto == null || id == 0)
             {
-                ModelState.AddModelError("ErrorMessages", "El Id de la Villa No Existe");
+                return BadRequest();
+            }
+
+            var villa = await _villaRepo.Obtener(v => v.Id == id, tracked: false);   //obtengo registro actual antes de modificar
+                                                                                     // los cambios los trabajo sobre un registro auxiliar
+            VillaUpdateDto villaDto = _mapper.Map<VillaUpdateDto>(villa);
+
+            if (villa == null) return BadRequest();
+
+            patchDto.ApplyTo(villaDto, ModelState);  //valida modelState sea valido
+
+            if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
             }
 
-            NumeroVilla modelo = _mapper.Map<NumeroVilla>(updateDto);
+            Villa modelo = _mapper.Map<Villa>(villaDto);
 
-            await _numeroRepo.Actualizar(modelo);
+            await _villaRepo.Actualizar(modelo);
             _response.statusCode = HttpStatusCode.NoContent;
 
-            return Ok(_response);               
+            return Ok(_response);
         }
 
 
