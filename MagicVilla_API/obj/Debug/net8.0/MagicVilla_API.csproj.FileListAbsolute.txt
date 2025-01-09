@@ -145,3 +145,4 @@ D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_API\o
 D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_API\obj\Debug\net8.0\MagicVilla_API.pdb
 D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_API\obj\Debug\net8.0\MagicVilla_API.genruntimeconfig.cache
 D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_API\obj\Debug\net8.0\ref\MagicVilla_API.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

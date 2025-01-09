@@ -10,6 +10,9 @@ using Microsoft.OpenApi.Models;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Asp.Versioning.ApiExplorer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using MagicVilla_API.Modelos;
 
 
 
@@ -19,7 +22,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("Default30", new CacheProfile()
+    {
+        Duration = 30
+    });
+}).AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddSwaggerGen();   //reemplazo esta linea por las que siguen
@@ -66,6 +75,8 @@ builder.Services.AddSwaggerGen(options => {
 
 });
 
+builder.Services.AddResponseCaching();
+
 // esto se pego directamente
 var key = builder.Configuration.GetValue<string>("ApiSetting:Secret");
 
@@ -88,12 +99,13 @@ builder.Services.AddAuthentication(x =>
 
 
 
-
-
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddIdentity<UsuarioAplicacion, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 

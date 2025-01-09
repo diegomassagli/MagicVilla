@@ -1,4 +1,5 @@
 ﻿using MagicVilla_Utilidad;
+using MagicVilla_Web.Models;
 using MagicVilla_Web.Models.Dto;
 using MagicVilla_Web.Services.IServices;
 using Microsoft.AspNetCore.Identity;
@@ -55,10 +56,22 @@ namespace MagicVilla_Web.Services
             return SendAsync<T>(new Models.APIRequest()
             {
                 APITipo = DS.APITipo.GET,
-                Url = _villaUrl + "/api/Villa/" ,
+                Url = _villaUrl + "/api/v1/Villa/" ,
                 Token = token
             });
         }
+
+        public Task<T> ObtenerTodosPaginado<T>(string token, int pageNumber =1, int pageSize = 4)
+        {
+            return SendAsync<T>(new Models.APIRequest()
+            {
+                APITipo = DS.APITipo.GET,
+                Url = _villaUrl + "/api/v1/Villa/VillasPaginado",
+                Token = token,
+                Parametros = new Parametros() { PageNumber = pageNumber, PageSize = pageSize}
+            });
+        }
+
 
         public Task<T> Remover<T>(int id, string token)
         {

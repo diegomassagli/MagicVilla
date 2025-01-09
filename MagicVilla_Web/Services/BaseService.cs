@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Web;
 
 namespace MagicVilla_Web.Services
 {
@@ -27,7 +28,23 @@ namespace MagicVilla_Web.Services
                 var client = _httpClient.CreateClient("MagicAPI"); // le da un nombre al servicio que esta creando
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "application/json");
-                message.RequestUri = new Uri(apiRequest.Url);
+
+                if(apiRequest.Parametros == null)
+                {                   
+                    message.RequestUri = new Uri(apiRequest.Url);
+                }
+                else  // aca armo la url con el query
+                {
+                    var builder = new UriBuilder(apiRequest.Url);  // le paso la url base
+                    var query = HttpUtility.ParseQueryString(builder.Query);  // "separo" el query si lo hubiera
+                    query["PageNumber"] = apiRequest.Parametros.PageNumber.ToString(); // le agrego el primer query
+                    query["PageSize"] = apiRequest.Parametros.PageSize.ToString(); // le agrego el segundo query
+                    builder.Query = query.ToString();   //    quedaria x ej:   api/villa/PageNumber=1&PageSize=4
+                    string url = builder.ToString();
+
+                    message.RequestUri = new Uri(url);
+                }
+
 
                 if(apiRequest.Datos != null)  // si no es nulo => que es un post  y solo en ese caso hago esto...
                 {
