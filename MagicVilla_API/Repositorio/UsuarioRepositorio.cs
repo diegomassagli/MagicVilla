@@ -18,14 +18,18 @@ namespace MagicVilla_API.Repositorio
         private readonly ApplicationDbContext _db;
         private string secretKey;
         private readonly UserManager<UsuarioAplicacion> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
 
-        public UsuarioRepositorio(ApplicationDbContext db, IConfiguration configuration, UserManager<UsuarioAplicacion> userManager, IMapper mapper)
+        public UsuarioRepositorio(ApplicationDbContext db, IConfiguration configuration, 
+               UserManager<UsuarioAplicacion> userManager, IMapper mapper, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
             secretKey = configuration.GetValue<string>("ApiSetting:Secret");
             _userManager = userManager;
             _mapper = mapper;
+            _roleManager = roleManager;
+
         }
 
         public bool IsUsuarioUnico(string userName)
@@ -60,7 +64,7 @@ namespace MagicVilla_API.Repositorio
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, usuario.Id.ToString()),
+                    new Claim(ClaimTypes.Name, usuario.UserName),
                     new Claim(ClaimTypes.Role, roles.FirstOrDefault())
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
@@ -70,27 +74,43 @@ namespace MagicVilla_API.Repositorio
             LoginResponseDTO loginResponseDTO = new()
             {
                 Token = tokenHandler.WriteToken(token),
-                Usuario = _mapper.Map<UsuarioDto>(usuario),
-                Rol = roles.FirstOrDefault()
+                Usuario = _mapper.Map<UsuarioDto>(usuario)
             };
 
             return loginResponseDTO;
         }
 
-        public async Task<Usuario> Registrar(RegistroRequestDTO registroRequestDTO)
+        public async Task<UsuarioDto> Registrar(RegistroRequestDTO registroRequestDTO)
         {
-            Usuario usuario = new()
+            UsuarioAplicacion usuario = new()
             {
                 UserName = registroRequestDTO.UserName,
-                Password = registroRequestDTO.Password,
-                Nombres = registroRequestDTO.Nombres,
-                Rol = registroRequestDTO.Rol
+                Email = registroRequestDTO.UserName,
+                NormalizedEmail = registroRequestDTO.UserName.ToUpper(),
+                Nombres = registroRequestDTO.Nombres
             };
 
-            await _db.Usuarios.AddAsync(usuario);
-            await _db.SaveChangesAsync();
-            usuario.Password = "";  //con esto me aseguro que no se devuelva el password
-            return usuario;
+            try
+            {
+                var resultado = await _userManager.CreateAsync(usuario, registroRequestDTO.Password);
+                if(resultado.Succeeded)
+                {
+                    if(!_roleManager.RoleExistsAsync("admin").GetAwaiter().GetResult())
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole("admin"));
+                    }
+
+                    await _userManager.AddToRoleAsync(usuario, "admin");
+                    var usuarioAp = _db.UsuariosAplicacion.FirstOrDefault(u => u.UserName == registroRequestDTO.UserName);
+                    return _mapper.Map<UsuarioDto>(usuarioAp);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return new UsuarioDto();
         }
     }
 }

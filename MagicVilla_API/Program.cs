@@ -60,18 +60,19 @@ builder.Services.AddSwaggerGen(options => {
             new List<string>()
         }
     });
-    options.SwaggerDoc("v1", new OpenApiInfo
+    options.SwaggerDoc("V1", new OpenApiInfo
     {
-        Version = "v1",
-        Title = "Magic Villa v1",
+        Version = "V1",
+        Title = "Magic Villa v1.0",
         Description = "API para Villas"
     });
-    options.SwaggerDoc("v2", new OpenApiInfo
+    options.SwaggerDoc("V2", new OpenApiInfo
     {
-        Version = "v2",
-        Title = "Magic Villa v2",
+        Version = "V2",
+        Title = "Magic Villa v2.0",
         Description = "API para Villas"
     });
+
 
 });
 
@@ -119,9 +120,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddApiVersioning(options =>
 {
+    options.ReportApiVersions = true;
     options.DefaultApiVersion = new ApiVersion(1, 0);
     options.AssumeDefaultVersionWhenUnspecified = true;
-    options.ReportApiVersions = true;
     options.ApiVersionReader = ApiVersionReader.Combine(
         new UrlSegmentApiVersionReader(),
         new HeaderApiVersionReader("X-Api-Version")
@@ -144,9 +145,10 @@ if (app.Environment.IsDevelopment())
     //app.UseSwaggerUI();
     app.UseSwaggerUI(options =>
     {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Magic_VillaV1");
-        options.SwaggerEndpoint("/swagger/v2/swagger.json", "Magic_VillaV2");
-    });
+        options.SwaggerEndpoint("/swagger/V1/swagger.json", "V1");
+        options.SwaggerEndpoint("/swagger/V2/swagger.json", "V2");
+    }
+    );
 }
 
 app.UseHttpsRedirection();

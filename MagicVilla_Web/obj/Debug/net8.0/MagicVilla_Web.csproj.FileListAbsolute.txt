@@ -230,3 +230,8 @@ D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\o
 D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\obj\Debug\net8.0\MagicVilla_Web.pdb
 D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\obj\Debug\net8.0\MagicVilla_Web.genruntimeconfig.cache
 D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\obj\Debug\net8.0\ref\MagicVilla_Web.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\ProyectosASPNET\ASPNET-CORE\WebApi-Net7-BaezStone\MagicVilla\MagicVilla_Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

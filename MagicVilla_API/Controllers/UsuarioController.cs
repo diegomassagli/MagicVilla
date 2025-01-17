@@ -10,7 +10,9 @@ namespace MagicVilla_API.Controllers
 {
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    [ApiVersionNeutral]
+    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
+    [ApiExplorerSettings(GroupName = "V1")]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepositorio _usuarioRepo;

@@ -4,6 +4,7 @@ using MagicVilla_Web.Models;
 using MagicVilla_Web.Models.Dto;
 using MagicVilla_Web.Models.ViewModel;
 using MagicVilla_Web.Services.IServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
@@ -24,7 +25,7 @@ namespace MagicVilla_Web.Controllers
             _mapper = mapper;            
         }
 
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> IndexNumeroVilla()
         {
             List<NumeroVillaDto> numeroVillaList = new();
@@ -37,6 +38,7 @@ namespace MagicVilla_Web.Controllers
         }
 
 
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> CrearNumeroVilla()
         {
             NumeroVillaViewModel numeroVillaVM = new();
@@ -93,9 +95,9 @@ namespace MagicVilla_Web.Controllers
         }
 
 
-
-    public async Task<IActionResult> ActualizarNumeroVilla(int villaNro)  // debe coincidir nombre metodo y parametro con lo que dice en el llamador: Views/NumeroVilla/IndexNumeroVilla
-    {
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> ActualizarNumeroVilla(int villaNro)  // debe coincidir nombre metodo y parametro con lo que dice en el llamador: Views/NumeroVilla/IndexNumeroVilla
+        {
             NumeroVillaUpdateViewModel numeroVillaVM = new();  // creo una instancia de mi viewModel y le doy un nombre
 
             var response = await _numeroVillaService.Obtener<APIResponse>(villaNro, HttpContext.Session.GetString(DS.SessionToken));
@@ -161,7 +163,7 @@ namespace MagicVilla_Web.Controllers
         }
 
 
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> RemoverNumeroVilla(int villaNro)  // debe coincidir nombre metodo y parametro con lo que dice en el llamador: Views/NumeroVilla/IndexNumeroVilla
         {
             NumeroVillaDeleteViewModel numeroVillaVM = new();  // creo una instancia de mi viewModel y le doy un nombre
