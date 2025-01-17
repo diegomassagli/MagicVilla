@@ -71,10 +71,14 @@ namespace MagicVilla_Web.Controllers
             var response = await _usuarioService.Registrar<APIResponse>(modelo);
             if(response !=null && response.IsExitoso)
             {
+                TempData["exitoso"] = "Usuario registrado correctamente";
                 return RedirectToAction("login");
             }
-
-            return View();
+            else
+            {
+                ModelState.AddModelError("ErrorMessages", response.ErrorMessages.FirstOrDefault());
+                return View(modelo);
+            }
         }
 
 
